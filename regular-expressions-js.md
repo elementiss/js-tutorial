@@ -545,6 +545,7 @@ console.log(res);
 ## FAQ за регулярними виразами
 
 ### У чому різниця між match() та exec()?
+`match()` - це метод рядка, `exec()` - це метод регулярного виразу.
 
 ``` javascript
 const text = "test1 test2";
@@ -556,11 +557,15 @@ const regex = /test\d/g;
 console.log(regex.exec(text)); // ['test1']
 console.log(regex.exec(text)); // ['test2']
 ```
+Який метод обрати?
+
+- Використовуйте `match()` коли потрібно знайти всі збіги одразу (з флагом `g`)
+- Використовуйте `exec()` коли потрібна детальна інформація про збіги або коли потрібно обробляти збіги по одному
 
 ### Як зробити групу незахоплюючою?
+Використовуйте `(?:...)`
 
 ``` javascript
-// Використовуйте (?:...)
 const text = "I love Javascript";
 console.log(text.match(/(?:I) (love)/)); 
 // ['I love', 'love']
