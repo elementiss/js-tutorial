@@ -11,15 +11,15 @@
         window.Flems(document.getElementById('flems'), {
             files: [{
                 name: 'app2.js',
-                content: ```console.log(/hello/.test('HELLO')); // false
+                content: `console.log(/hello/.test('HELLO')); // false
 console.log(/hello/i.test('HELLO')); // true
 console.log('hello hello'.match(/hello/)); // 'hello'
 console.log('hello hello'.match(/hello/g)); // ['hello', 'hello']
 console.log('line1\nline2'.match(/^line/g)); // [ 'line' ]
 console.log('line1\nline2'.match(/^line/gm)); // ['line', 'line']
-let multiline = `First line
-Second line
-Third line`;
+let multiline = 'First line\
+Second line\
+Third line';
 
 // ^ и $ тепер працюють для кожного рядка
 console.log(multiline.match(/^Second/));  // null
@@ -39,7 +39,7 @@ let result = regexp.exec(str);
 console.log(result.indices[0]); // [6, 11]
 // 6 - початкова позиція збігу
 // 11 - кінцева позиція збігу
-                ```
+                `
             }],
             middle: 90,
             fileTabs        : false,
