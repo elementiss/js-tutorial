@@ -472,6 +472,9 @@ console.log("I love HTML".replace(/HTML/, "$& и JavaScript") );
 // I love HTML и JavaScript
 ```
 
+<iframe src="examples/ex9.html" width="100%"  frameborder="0"></iframe>
+
+
 Для ситуацій, які вимагають «розумних» замін, другим аргументом може бути функція. Вона буде викликатись для кожного збігу, і її результат буде вставлений як заміна.
 
 ## Методи RegExp
