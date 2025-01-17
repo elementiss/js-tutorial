@@ -32,13 +32,6 @@ regex.lastIndex = 3;
 console.log('a1b2'.match(regex)); // '2'
 console.log(/\u{1F600}/u.test('😀')); // true
 console.log(/^.$/u.test('😀')); // true
-let str = "Hello World";
-let regexp = /World/d;
-let result = regexp.exec(str);
-
-console.log(result.indices[0]); // [6, 11]
-// 6 - початкова позиція збігу
-// 11 - кінцева позиція збігу
                 `
             }],
             middle: 90,
