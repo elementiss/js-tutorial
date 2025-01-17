@@ -76,6 +76,8 @@ let text = "Hello HELLO hello";
 console.log(text.match(/hello/gi)); // ['Hello', 'HELLO', 'hello']
 ```
 
+<iframe src="examples/ex1.html" width="100%" height="300" frameborder="0"></iframe>
+
 **Приклади**
 
 ``` javascript
