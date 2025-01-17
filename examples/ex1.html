@@ -12,8 +12,7 @@
             files: [{
                 name: 'app.js',
                 content: `let text = "Hello HELLO hello";
-console.log(text.match(/hello/gi));
-`
+console.log(text.match(/hello/gi));`
             }],
             middle: 80,
             selected: 'app.js',
@@ -21,6 +20,9 @@ console.log(text.match(/hello/gi));
             theme           : 'default',
             fileTabs        : false,
             autoHeight      : true,
+            toolbar         : false,
+            editable        : true,
+            console         : true,
             toolbar: true
         })
     </script>
