@@ -229,6 +229,7 @@ let str = "+1(900)-123-45-67";
 
 console.log(str.replace(/\D/g, "")); // 19001234567
 ```
+
 <iframe src="examples/ex6.html" width="100%" height="200" frameborder="0"></iframe>
 
 
@@ -266,6 +267,10 @@ console.log(str.replace(/\D/g, "")); // 19001234567
 console.log( "1 23 456 78".match(/\b\d\d\b/g)); // [ '23', '78' ]
 console.log( "12,34,56".match(/\b\d\d\b/g)); // [ '12', '34', '56' ]
 ```
+
+<iframe src="examples/ex7.html" width="100%" height="200" frameborder="0"></iframe>
+
+
 Можна думати про `\b` як про символ нульової ширини, вставлений автоматично в потрібних місцях. При цьому у результаті їх не видно (вони ж нульової ширини), хоча відповідність шаблону є.
 
 ## Якоря: початок та кінець рядка
