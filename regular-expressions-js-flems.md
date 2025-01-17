@@ -661,40 +661,4 @@ console.log( "/".match(new RegExp("/")) ); // знаходить /
 
 Вираз `.*` не захоплює перехід на новий рядок, на відміну від `\s\S`.
 
-<script src=https://flems.io/flems.html id=flems defer></script>
-<script>
-		document.getElementById("flems").onload = function() {
-			;[].forEach.call(document.querySelectorAll("pre code.language-js"), function(el) {
-				el = el.parentNode
-
-				var div = document.createElement("div")
-				window.Flems(div, {
-					middle        : 60,
-					selected: 'b.js',
-					editable      : true,
-					toolbar       : false,
-					shareButton   : true,
-					console       : false,
-					autoHeight    : true,
-					fileTabs      : false,
-					files: [{
-						name: "a.js",
-						content: `
-						const output = document.createElement('div');
-document.body.appendChild(output);
-const originalConsoleLog = console.log;
-console.log = function(message) {
-    output.innerHTML += message + '<br>';
-    originalConsoleLog.apply(console, arguments);
-};`},
-                                        {       name: "b.js",
-						content: el.textContent
-					}]
-				}, "https://flems.io/flems.html")
-
-				el.parentNode.insertBefore(div, el)
-				el.parentNode.removeChild(el)
-			})
-		}
-</script>
-
+<iframe src="script.html" width="100%" height="100" frameborder="0"></iframe>
