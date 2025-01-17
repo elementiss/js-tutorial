@@ -96,6 +96,9 @@ console.log('line1\nline2'.match(/^line/g)); // [ 'line' ]
 console.log('line1\nline2'.match(/^line/gm)); // ['line', 'line']
 ```
 
+<iframe src="examples/ex8.html" width="100%" height="200" frameborder="0"></iframe>
+
+
 ``` javascript
 let multiline = `First line
 Second line
