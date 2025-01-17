@@ -2,6 +2,9 @@
 
 Регулярні вирази JavaScript — це потужний інструмент для роботи з текстом, що дозволяє шукати, перевіряти, витягувати і змінювати рядки за заданими шаблонами. Вони часто використовуються для таких завдань, як валідація даних (наприклад, перевірка адрес електронної пошти або номерів телефонів), пошук і заміна фрагментів тексту, а також отримання інформації, що відповідає певним критеріям (наприклад, дати, ключові слова).
 
+<pre><code class=language-js>console.log("Hello");</code></pre>
+
+
 Використання регулярних виразів допомагає скоротити код та спростити обробку тексту.
 
 У JavaScript регулярні вирази реалізовані окремим об'єктом `RegExp` і інтегровані в методи роботи з рядками.
@@ -657,3 +660,41 @@ console.log( "/".match(new RegExp("/")) ); // знаходить /
 ### У чому відмінність крапки від \\s\\S
 
 Вираз `.*` не захоплює перехід на новий рядок, на відміну від `\s\S`.
+
+<script src=https://flems.io/flems.html id=flems defer></script>
+<script>
+		document.getElementById("flems").onload = function() {
+			;[].forEach.call(document.querySelectorAll("pre code.language-js"), function(el) {
+				el = el.parentNode
+
+				var div = document.createElement("div")
+				window.Flems(div, {
+					middle        : 60,
+					selected: 'b.js',
+					editable      : true,
+					toolbar       : false,
+					shareButton   : true,
+					console       : false,
+					autoHeight    : true,
+					fileTabs      : false,
+					files: [{
+						name: "a.js",
+						content: `
+						const output = document.createElement('div');
+document.body.appendChild(output);
+const originalConsoleLog = console.log;
+console.log = function(message) {
+    output.innerHTML += message + '<br>';
+    originalConsoleLog.apply(console, arguments);
+};`},
+                                        {       name: "b.js",
+						content: el.textContent
+					}]
+				}, "https://flems.io/flems.html")
+
+				el.parentNode.insertBefore(div, el)
+				el.parentNode.removeChild(el)
+			})
+		}
+</script>
+
