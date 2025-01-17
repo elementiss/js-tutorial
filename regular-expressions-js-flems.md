@@ -216,6 +216,9 @@ console.log(str.match(regexp));
 console.log(str.match(regexp).join('') ); // 19001234567
 ```
 
+<iframe src="examples/ex4.html" width="100%" height="200" frameborder="0"></iframe>
+
+
 Альтернативний, більш короткий шлях - знайти нецифрові символи `\D` і видалити їх з рядка:
 
 ``` javascript
