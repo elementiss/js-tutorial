@@ -1,1 +1,1 @@
-[Regular Expressions|regular-expressions-js.md]
+[./regular-expressions-js.md](Regular Expressions)
