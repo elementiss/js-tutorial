@@ -4,7 +4,7 @@
 
 <html>
 <pre><code class=language-js>console.log("Hello");</code></pre>
-</html>html>
+</html>
 
 Використання регулярних виразів допомагає скоротити код та спростити обробку тексту.
 
