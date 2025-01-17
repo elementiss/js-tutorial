@@ -11,20 +11,20 @@
         window.Flems(document.getElementById('flems'), {
             files: [{
                 name: 'app2.js',
-                content: `let multiline = 'First line\n\
-Second line\n\
+                content: `let multiline = 'First line\\n\
+Second line\\n\
 Third line';
 
 // ^ и $ тепер працюють для кожного рядка
 console.log(multiline.match(/^Second/));  // null
 console.log(multiline.match(/^Second/m)); // ['Second']
-let regex = /\d/y;
+let regex = /\\d/y;
 regex.lastIndex = 1;
 console.log('a1b2'.match(regex)); // ['1']
 
 regex.lastIndex = 3;
 console.log('a1b2'.match(regex)); // '2'
-console.log(/\u{1F600}/u.test('😀')); // true
+console.log(/\\u{1F600}/u.test('😀')); // true
 console.log(/^.$/u.test('😀')); // true
                 `
             }],
