@@ -11,13 +11,7 @@
         window.Flems(document.getElementById('flems'), {
             files: [{
                 name: 'app2.js',
-                content: `console.log(/hello/.test('HELLO')); // false
-console.log(/hello/i.test('HELLO')); // true
-console.log('hello hello'.match(/hello/)); // 'hello'
-console.log('hello hello'.match(/hello/g)); // ['hello', 'hello']
-console.log('line1\\nline2'.match(/^line/g)); // [ 'line' ]
-console.log('line1\\nline2'.match(/^line/gm)); // ['line', 'line']
-let multiline = 'First line\n\
+                content: `let multiline = 'First line\n\
 Second line\n\
 Third line';
 
