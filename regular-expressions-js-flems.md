@@ -199,6 +199,9 @@ let regexp = /\d/;
 console.log(str.match(regexp)); // 1
 ```
 
+<iframe src="examples/ex3.html" width="100%" height="200" frameborder="0"></iframe>
+
+
 Давайте додамо модифікатор `g`, щоб знайти всі цифри:
 
 ``` javascript
