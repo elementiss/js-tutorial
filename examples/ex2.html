@@ -15,8 +15,8 @@
 console.log(/hello/i.test('HELLO')); // true
 console.log('hello hello'.match(/hello/)); // 'hello'
 console.log('hello hello'.match(/hello/g)); // ['hello', 'hello']
-console.log('line1\nline2'.match(/^line/g)); // [ 'line' ]
-console.log('line1\nline2'.match(/^line/gm)); // ['line', 'line']
+console.log('line1\\nline2'.match(/^line/g)); // [ 'line' ]
+console.log('line1\\nline2'.match(/^line/gm)); // ['line', 'line']
 let multiline = 'First line\
 Second line\
 Third line';
