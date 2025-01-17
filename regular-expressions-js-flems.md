@@ -128,6 +128,7 @@ console.log(result.indices[0]); // [6, 11]
 // 6 - початкова позиція збігу
 // 11 - кінцева позиція збігу
 ```
+<iframe src="examples/ex2.html" width="100%" height="200" frameborder="0"></iframe>
 
 Модифікатор `d` корисний, коли потрібно:
 
