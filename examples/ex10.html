@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>String match() example</title>
+    <script src="https://flems.io/flems.html" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <div id="flems"></div>
+    <script>
+        window.Flems(document.getElementById('flems'), {
+            files: [{
+                name: 'app.js',
+                content: `console.log("We will, we will".replace(/we/i, "I")); 
+console.log("We will, we will".replace(/we/ig, "I"));`
+            }],
+            middle: 90,
+            fileTabs        : false,
+            autoHeight      : false,
+            toolbar         : true,
+            editable        : true,
+            console         : true,
+         layout: {      
+                type: 'vertical',
+                height: 500
+            } 
+        })
+    </script>
+</body>
+</html>
