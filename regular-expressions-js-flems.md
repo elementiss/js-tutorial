@@ -454,6 +454,9 @@ console.log("We will, we will".replace(/we/i, "I")); // I will, we will
 console.log("We will, we will".replace(/we/ig, "I")); // I will, I will
 ```
 
+<iframe src="examples/ex10.html" width="100%"  frameborder="0"></iframe>
+
+
 У рядку заміни `replacement` ми можемо використовувати спеціальні комбінації символів для вставки фрагментів збігу:
 
 |Спецсимволи | Дія у рядку заміни|
