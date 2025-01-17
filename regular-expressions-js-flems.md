@@ -133,7 +133,7 @@ console.log(result.indices[0]); // [6, 11]
 
 Output: 6 - початкова позиція збігу, 11 - кінцева позиція збігу.
 
-<iframe src="examples/ex5.html" width="100%" height="200" frameborder="0"></iframe>
+<iframe src="examples/ex5.html" width="100%" height="250" frameborder="0"></iframe>
 
 
 Модифікатор `d` корисний, коли потрібно:
@@ -219,7 +219,7 @@ console.log(str.match(regexp));
 console.log(str.match(regexp).join('') ); // 19001234567
 ```
 
-<iframe src="examples/ex4.html" width="100%" height="200" frameborder="0"></iframe>
+<iframe src="examples/ex4.html" width="100%" height="250" frameborder="0"></iframe>
 
 
 Альтернативний, більш короткий шлях - знайти нецифрові символи `\D` і видалити їх з рядка:
@@ -229,6 +229,9 @@ let str = "+1(900)-123-45-67";
 
 console.log(str.replace(/\D/g, "")); // 19001234567
 ```
+<iframe src="examples/ex6.html" width="100%" height="200" frameborder="0"></iframe>
+
+
 Важливо знати: 
 
 Всередині наборів символів метасимвол '|' сприймається як типовий знак. Наприклад, `[bak|bok|buk]` означає рівно те саме, що і `[baouk|]`.
