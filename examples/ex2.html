@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>String match() example</title>
+    <script src="https://flems.io/flems.html" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <div id="flems"></div>
+    <script>
+        window.Flems(document.getElementById('flems'), {
+            files: [{
+                name: 'app.js',
+                content: ```console.log(/hello/.test('HELLO')); // false
+console.log(/hello/i.test('HELLO')); // true
+console.log('hello hello'.match(/hello/)); // 'hello'
+console.log('hello hello'.match(/hello/g)); // ['hello', 'hello']
+console.log('line1\nline2'.match(/^line/g)); // [ 'line' ]
+console.log('line1\nline2'.match(/^line/gm)); // ['line', 'line']
+let multiline = `First line
+Second line
+Third line`;
+
+// ^ и $ тепер працюють для кожного рядка
+console.log(multiline.match(/^Second/));  // null
+console.log(multiline.match(/^Second/m)); // ['Second']
+let regex = /\d/y;
+regex.lastIndex = 1;
+console.log('a1b2'.match(regex)); // ['1']
+
+regex.lastIndex = 3;
+console.log('a1b2'.match(regex)); // '2'
+console.log(/\u{1F600}/u.test('😀')); // true
+console.log(/^.$/u.test('😀')); // true
+let str = "Hello World";
+let regexp = /World/d;
+let result = regexp.exec(str);
+
+console.log(result.indices[0]); // [6, 11]
+// 6 - початкова позиція збігу
+// 11 - кінцева позиція збігу
+                ```
+            }],
+            middle: 90,
+            fileTabs        : false,
+            autoHeight      : true,
+            toolbar         : false,
+            editable        : true,
+            console         : true
+        })
+    </script>
+</body>
+</html>
