@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>( regular-expressions-js-flems.md )</title>
+  <title>regular-expressions-js-flems2.md</title>
   <style>
     html {
       color: #1a1a1a;
@@ -257,7 +257,7 @@
     color: #333;
     background-color: #fff;
     padding: 20px;
-    max-width: 34em; /* ширина текста */
+    max-width: 40em; /* ширина текста */
     margin: 0 auto;
   }
 
@@ -639,9 +639,7 @@
   </style>
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">( regular-expressions-js-flems.md )</h1>
-</header>
+<h1 id="регулярні-вирази-javascript">Регулярні вирази JavaScript</h1>
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#регулярні-вирази-javascript"
@@ -718,7 +716,6 @@ id="toc-у-чому-відмінність-крапки-від-ss">У чому �
 </ul></li>
 </ul>
 </nav>
-<h1 id="регулярні-вирази-javascript">Регулярні вирази JavaScript</h1>
 <p>Регулярні вирази JavaScript — це потужний інструмент для роботи з
 текстом, що дозволяє шукати, перевіряти, витягувати і змінювати рядки за
 заданими шаблонами. Вони часто використовуються для таких завдань, як
@@ -726,10 +723,6 @@ id="toc-у-чому-відмінність-крапки-від-ss">У чому �
 номерів телефонів), пошук і заміна фрагментів тексту, а також отримання
 інформації, що відповідає певним критеріям (наприклад, дати, ключові
 слова).</p>
-
-<pre><code class=language-js>console.log("Hello");</code></pre>
-
-
 <p>Використання регулярних виразів допомагає скоротити код та спростити
 обробку тексту.</p>
 <p>У JavaScript регулярні вирази реалізовані окремим об'єктом
@@ -746,10 +739,10 @@ id="toc-у-чому-відмінність-крапки-від-ss">У чому �
 <li>Літеральна нотація (за допомогою слешів)</li>
 </ul>
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ss">/pattern/modifiers</span><span class="op">;</span> <span class="co">// синтаксис </span></span>
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ss">/pattern/modifiers</span><span class="op">;</span> <span class="co">// синтаксис</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regex1 <span class="op">=</span> <span class="ss">/hello/</span><span class="op">;</span> </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regex2 <span class="op">=</span> <span class="ss">/</span><span class="sc">[a-z]</span><span class="ss">/gi</span><span class="op">;</span> </span></code></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regex1 <span class="op">=</span> <span class="ss">/hello/</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regex2 <span class="op">=</span> <span class="ss">/</span><span class="sc">[a-z]</span><span class="ss">/gi</span><span class="op">;</span></span></code></pre></div>
 <ul>
 <li>Конструктор <code>RegExp</code></li>
 </ul>
@@ -766,7 +759,7 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> tag <span class="op">=</span> <span class="fu">prompt</span>(<span class="st">&quot;Який тег ви хочете знайти?&quot;</span><span class="op">,</span> <span class="st">&quot;h2&quot;</span>)<span class="op">;</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regexp <span class="op">=</span> <span class="kw">new</span> <span class="bu">RegExp</span>(<span class="vs">`&lt;</span><span class="sc">${</span>tag<span class="sc">}</span><span class="vs">&gt;`</span>)<span class="op">;</span> </span></code></pre></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regexp <span class="op">=</span> <span class="kw">new</span> <span class="bu">RegExp</span>(<span class="vs">`&lt;</span><span class="sc">${</span>tag<span class="sc">}</span><span class="vs">&gt;`</span>)<span class="op">;</span></span></code></pre></div>
 <p>Якщо користувач відповість на prompt рядком "h2", то вийде регулярний
 вираз <code>/&lt;h2&gt;/</code>.</p>
 <h2 id="модифікатори-регулярних-виразів">Модифікатори регулярних
@@ -775,8 +768,8 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-
 виразу чи надають додаткову інформацію.</p>
 <table>
 <colgroup>
-<col style="width: 16%" />
-<col style="width: 83%" />
+<col style="width: 6%" />
+<col style="width: 93%" />
 </colgroup>
 <thead>
 <tr>
@@ -828,54 +821,46 @@ ES2022). Додає властивість-масив <strong>indices</strong> �
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Обидва варіанти еквівалентні</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regex1 <span class="op">=</span> <span class="ss">/hello/gi</span><span class="op">;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regex2 <span class="op">=</span> <span class="kw">new</span> <span class="bu">RegExp</span>(<span class="st">&#39;hello&#39;</span><span class="op">,</span> <span class="st">&#39;gi&#39;</span>)<span class="op">;</span></span></code></pre></div>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regex2 <span class="op">=</span> <span class="kw">new</span> <span class="bu">RegExp</span>(<span class="st">&quot;hello&quot;</span><span class="op">,</span> <span class="st">&quot;gi&quot;</span>)<span class="op">;</span></span></code></pre></div>
 <p>Модифікатори можна комбінувати:</p>
-<div class="sourceCode" id="cb5"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> text <span class="op">=</span> <span class="st">&quot;Hello HELLO hello&quot;</span><span class="op">;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(text<span class="op">.</span><span class="fu">match</span>(<span class="ss">/hello/gi</span>))<span class="op">;</span> <span class="co">// [&#39;Hello&#39;, &#39;HELLO&#39;, &#39;hello&#39;]</span></span></code></pre></div>
-<iframe src="examples/ex1.html" width="100%" height="200" frameborder="0">
-</iframe>
+<pre><code class=language-js>let text = "Hello HELLO hello";
+console.log(text.match(/hello/gi)); // ['Hello', 'HELLO', 'hello']
+</code></pre>
 <p><strong>Приклади</strong></p>
-<div class="sourceCode" id="cb6"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="ss">/hello/</span><span class="op">.</span><span class="fu">test</span>(<span class="st">&#39;HELLO&#39;</span>))<span class="op">;</span> <span class="co">// false</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="ss">/hello/i</span><span class="op">.</span><span class="fu">test</span>(<span class="st">&#39;HELLO&#39;</span>))<span class="op">;</span> <span class="co">// true</span></span></code></pre></div>
-<div class="sourceCode" id="cb7"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;hello hello&#39;</span><span class="op">.</span><span class="fu">match</span>(<span class="ss">/hello/</span>) <span class="co">// &#39;hello&#39;</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;hello hello&#39;</span><span class="op">.</span><span class="fu">match</span>(<span class="ss">/hello/g</span>) <span class="co">// [&#39;hello&#39;, &#39;hello&#39;]</span></span></code></pre></div>
-<div class="sourceCode" id="cb8"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;line1</span><span class="sc">\n</span><span class="st">line2&#39;</span><span class="op">.</span><span class="fu">match</span>(<span class="ss">/</span><span class="sc">^</span><span class="ss">line/g</span>))<span class="op">;</span> <span class="co">// [ &#39;line&#39; ]</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;line1</span><span class="sc">\n</span><span class="st">line2&#39;</span><span class="op">.</span><span class="fu">match</span>(<span class="ss">/</span><span class="sc">^</span><span class="ss">line/gm</span>))<span class="op">;</span> <span class="co">// [&#39;line&#39;, &#39;line&#39;]</span></span></code></pre></div>
-<iframe src="examples/ex8.html" width="100%" height="450" frameborder="0">
-</iframe>
-<div class="sourceCode" id="cb9"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> multiline <span class="op">=</span> <span class="vs">`First line</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="vs">Second line</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="vs">Third line`</span><span class="op">;</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co">// ^ и $ тепер працюють для кожного рядка</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(multiline<span class="op">.</span><span class="fu">match</span>(<span class="ss">/</span><span class="sc">^</span><span class="ss">Second/</span>))<span class="op">;</span>  <span class="co">// null</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(multiline<span class="op">.</span><span class="fu">match</span>(<span class="ss">/</span><span class="sc">^</span><span class="ss">Second/m</span>))<span class="op">;</span> <span class="co">// [&#39;Second&#39;]</span></span></code></pre></div>
-<div class="sourceCode" id="cb10"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regex <span class="op">=</span> <span class="ss">/</span><span class="sc">\d</span><span class="ss">/y</span><span class="op">;</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>regex<span class="op">.</span><span class="at">lastIndex</span> <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;a1b2&#39;</span><span class="op">.</span><span class="fu">match</span>(regex) <span class="co">// [&#39;1&#39;]</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>regex<span class="op">.</span><span class="at">lastIndex</span> <span class="op">=</span> <span class="dv">3</span><span class="op">;</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;a1b2&#39;</span><span class="op">.</span><span class="fu">match</span>(regex) <span class="co">// &#39;2&#39;</span></span></code></pre></div>
-<div class="sourceCode" id="cb11"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ss">/</span><span class="sc">\u</span><span class="ss">{1F600}/u</span><span class="op">.</span><span class="fu">test</span>(<span class="st">&#39;😀&#39;</span>) <span class="co">// true</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="ss">/</span><span class="sc">^</span><span class="ss">.</span><span class="sc">$</span><span class="ss">/u</span><span class="op">.</span><span class="fu">test</span>(<span class="st">&#39;😀&#39;</span>))<span class="op">;</span> <span class="co">// true</span></span></code></pre></div>
-<iframe src="examples/ex2.html" width="100%" height="200" frameborder="0">
-</iframe>
-<div class="sourceCode" id="cb12"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> str <span class="op">=</span> <span class="st">&quot;Hello World&quot;</span><span class="op">;</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regexp <span class="op">=</span> <span class="ss">/World/d</span><span class="op">;</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> result <span class="op">=</span> regexp<span class="op">.</span><span class="fu">exec</span>(str)<span class="op">;</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(result<span class="op">.</span><span class="at">indices</span>[<span class="dv">0</span>])<span class="op">;</span> <span class="co">// [6, 11]</span></span></code></pre></div>
+<pre><code class=language-js>console.log(/hello/.test('HELLO')); // false
+console.log(/hello/i.test('HELLO')); // true
+</code></pre>
+<pre><code class=language-js>console.log('hello hello'.match(/hello/)); // 'hello'
+console.log('hello hello'.match(/hello/g)); // ['hello', 'hello']
+</code></pre>
+<pre><code class=language-js>console.log('line1\nline2'.match(/^line/g)); // [ 'line' ]
+console.log('line1\nline2'.match(/^line/gm)); // ['line', 'line']
+</code></pre>
+<pre><code class=language-js>let multiline = `First line
+Second line
+Third line`;
+
+// ^ и $ тепер працюють для кожного рядка
+console.log(multiline.match(/^Second/));  // null
+console.log(multiline.match(/^Second/m)); // ['Second']
+</code></pre>
+<pre><code class=language-js>let regex = /\d/y;
+regex.lastIndex = 1;
+console.log('a1b2'.match(regex)); // ['1']
+
+regex.lastIndex = 3;
+console.log('a1b2'.match(regex)); // '2'
+</code></pre>
+<pre><code class=language-js>console.log(/\u{1F600}/u.test('😀')); // true
+console.log(/^.$/u.test('😀')); // true
+</code></pre>
+<pre><code class=language-js>let str = "Hello World";
+let regexp = /World/d;
+let result = regexp.exec(str);
+
+console.log(result.indices[0]); // [6, 11]
+</code></pre>
 <p>Output: 6 - початкова позиція збігу, 11 - кінцева позиція збігу.</p>
-<iframe src="examples/ex5.html" width="100%" frameborder="0">
-</iframe>
 <p>Модифікатор <code>d</code> корисний, коли потрібно:</p>
 <ul>
 <li>Визначати точне положення збігів у тексті</li>
@@ -883,32 +868,23 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb12
 <li>Створювати парсери</li>
 </ul>
 <p>Важливо знати:</p>
-<p>Модифікатори можуть суттєво впливати на продуктивність
-регулярних<br />
+<p>Модифікатори можуть суттєво впливати на продуктивність регулярних
 виразів, особливо під час роботи з великими текстами.</p>
 <h2 id="набори-та-діапазони">Набори та діапазони</h2>
 <p>Кілька символів або символьних класів у квадратних дужках
-<code>[…]</code><br />
-означають «шукати будь-який символ із заданих».</p>
+<code>[…]</code> означають «шукати будь-який символ із заданих».</p>
 <p>Наприклад, <code>[eao]</code> означає будь-який із трьох символів:
-'a', 'e' або<br />
-'o'. Це називається <em>набором</em>.</p>
-<p>Зверніть увагу, що в наборі кілька символів, але в результаті
-він<br />
+'a', 'e' або 'o'. Це називається <em>набором</em>.</p>
+<p>Зверніть увагу, що в наборі кілька символів, але в результаті він
 відповідає рівно одному символу.</p>
 <p>У квадратних дужках можна вказувати <em>діапазони</em>, наприклад,
-<code>[a-z]</code><br />
-відповідає символу в діапазоні від a до z, або <code>[0-5]</code> —
-цифра від 0<br />
-до 5.</p>
+<code>[a-z]</code> відповідає символу в діапазоні від a до z, або
+<code>[0-5]</code> — цифра від 0 до 5.</p>
 <p>У <code>[0-9A-F]</code> одразу два діапазони: шукається символ, який
-або цифра від 0<br />
-до 9, або літера від A до F.</p>
+або цифра від 0 до 9, або літера від A до F.</p>
 <p>Якщо ми хочемо знайти літери як у верхньому, так і в нижньому
-регістрі, то можемо<br />
-додати діапазон: <code>[0-9A-Fa-f]</code>. Або встановити у регулярному
-виразі<br />
-модифікатор <code>i</code>.</p>
+регістрі, то можемо додати діапазон: <code>[0-9A-Fa-f]</code>. Або
+встановити у регулярному виразі модифікатор <code>i</code>.</p>
 <table>
 <thead>
 <tr>
@@ -941,9 +917,9 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb12
 <p>Символьні класи - це лише скорочення для наборів символів.</p>
 <table>
 <colgroup>
-<col style="width: 16%" />
-<col style="width: 5%" />
-<col style="width: 77%" />
+<col style="width: 4%" />
+<col style="width: 15%" />
+<col style="width: 80%" />
 </colgroup>
 <thead>
 <tr>
@@ -990,35 +966,25 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb12
 <p>Для прикладу, <code>\d\s\w</code> позначає цифру, за якою йде символ
 пробілу, а потім символ слова, наприклад <code>1 a</code>.</p>
 <p>Знайдемо першу цифру в номері телефону:</p>
-<div class="sourceCode" id="cb13"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> str <span class="op">=</span> <span class="st">&quot;+1(900)-123-45-67&quot;</span><span class="op">;</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regexp <span class="op">=</span> <span class="ss">/</span><span class="sc">\d</span><span class="ss">/</span><span class="op">;</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(str<span class="op">.</span><span class="fu">match</span>(regexp))<span class="op">;</span> <span class="co">// 1</span></span></code></pre></div>
-<iframe src="examples/ex3.html" width="100%" height="200" frameborder="0">
-</iframe>
+<pre><code class=language-js>let str = "+1(900)-123-45-67";
+let regexp = /\d/;
+
+console.log(str.match(regexp)); // 1
+</code></pre>
 <p>Давайте додамо модифікатор <code>g</code>, щоб знайти всі цифри:</p>
-<div class="sourceCode" id="cb14"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> str <span class="op">=</span> <span class="st">&quot;+1(900)-123-45-67&quot;</span><span class="op">;</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regexp <span class="op">=</span> <span class="ss">/</span><span class="sc">\d</span><span class="ss">/g</span><span class="op">;</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(str<span class="op">.</span><span class="fu">match</span>(regexp))<span class="op">;</span> </span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co">// масив збігів: 1,9,0,0,1,2,3,4,5,6,7</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co">// можна зробити з них чисто цифровий номер телефону</span></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(str<span class="op">.</span><span class="fu">match</span>(regexp)<span class="op">.</span><span class="fu">join</span>(<span class="st">&#39;&#39;</span>) )<span class="op">;</span> <span class="co">// 19001234567</span></span></code></pre></div>
-<iframe src="examples/ex4.html" width="100%" height="250" frameborder="0">
-</iframe>
+<pre><code class=language-js>let str = "+1(900)-123-45-67";
+let regexp = /\d/g;
+
+console.log(str.match(regexp));
+// масив збігів: 1,9,0,0,1,2,3,4,5,6,7
+
+// можна зробити з них чисто цифровий номер телефону
+console.log(str.match(regexp).join('') ); // 19001234567
+</code></pre>
 <p>Альтернативний, більш короткий шлях - знайти нецифрові символи
 <code>\D</code> і видалити їх з рядка:</p>
-<div class="sourceCode" id="cb15"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> str <span class="op">=</span> <span class="st">&quot;+1(900)-123-45-67&quot;</span><span class="op">;</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(str<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">\D</span><span class="ss">/g</span><span class="op">,</span> <span class="st">&quot;&quot;</span>))<span class="op">;</span> <span class="co">// 19001234567</span></span></code></pre></div>
-<iframe src="examples/ex6.html" width="100%" height="200" frameborder="0">
-</iframe>
+<pre><code class=language-js>let str = "+1(900)-123-45-67";
+console.log(str.replace(/\D/g, "")); // 19001234567</code></pre>
 <p>Важливо знати:</p>
 <p>Всередині наборів символів метасимвол <code>'|'</code> сприймається
 як типовий знак. Наприклад, <code>[bak|bok|buk]</code> означає рівно те
@@ -1039,9 +1005,8 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb15
 <li>Кінець тексту, якщо його останній символ <code>\w</code>.</li>
 </ul>
 <p>Наприклад, регулярний вираз <code>\bJava\b</code> буде знайдено у
-рядку<br />
-<code>Hello, Java!</code>, де <code>Java</code> — окреме слово, але не
-буде знайдено у рядку <code>Hello, JavaScript!</code>.</p>
+рядку <code>Hello, Java!</code>, де <code>Java</code> — окреме слово,
+але не буде знайдено у рядку <code>Hello, JavaScript!</code>.</p>
 <p>Ми можемо використовувати <code>\b</code> не тільки зі словами, але й
 із цифрами.</p>
 <p>Наприклад, регулярний вираз <code>\b\d\d\b</code> шукає окремо
@@ -1049,11 +1014,9 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb15
 <code>\d\d</code> були символи, відмінні від <code>\w</code>, такі як
 пробіли або пунктуація (або початок/кінець тексту).</p>
 <p><strong>Приклад</strong></p>
-<div class="sourceCode" id="cb16"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>( <span class="st">&quot;1 23 456 78&quot;</span><span class="op">.</span><span class="fu">match</span>(<span class="ss">/</span><span class="sc">\b\d\d\b</span><span class="ss">/g</span>))<span class="op">;</span> <span class="co">// [ &#39;23&#39;, &#39;78&#39; ]</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>( <span class="st">&quot;12,34,56&quot;</span><span class="op">.</span><span class="fu">match</span>(<span class="ss">/</span><span class="sc">\b\d\d\b</span><span class="ss">/g</span>))<span class="op">;</span> <span class="co">// [ &#39;12&#39;, &#39;34&#39;, &#39;56&#39; ]</span></span></code></pre></div>
-<iframe src="examples/ex7.html" width="100%" height="200" frameborder="0">
-</iframe>
+<pre><code class=language-js>console.log("1 23 456 78".match(/\b\d\d\b/g)); // [ '23', '78' ]
+console.log("12,34,56".match(/\b\d\d\b/g)); // [ '12', '34', '56' ]
+</code></pre>
 <p>Можна думати про <code>\b</code> як про символ нульової ширини,
 вставлений автоматично в потрібних місцях. При цьому у результаті їх не
 видно (вони ж нульової ширини), хоча відповідність шаблону є.</p>
@@ -1064,10 +1027,6 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb16
 <p><code>^</code> означає збіг з початком тексту, а <code>$</code> — з
 кінцем.</p>
 <table>
-<colgroup>
-<col style="width: 16%" />
-<col style="width: 83%" />
-</colgroup>
 <thead>
 <tr>
 <th>Модифікатор</th>
@@ -1086,23 +1045,22 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb16
 </tbody>
 </table>
 <p>Давайте перевіримо чи починається текст з Mary:</p>
-<div class="sourceCode" id="cb17"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> str1 <span class="op">=</span> <span class="st">&quot;Mary had a little kitten&quot;</span><span class="op">;</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>( <span class="ss">/</span><span class="sc">^</span><span class="ss">Mary/</span><span class="op">.</span><span class="fu">test</span>(str1) )<span class="op">;</span> <span class="co">// true</span></span></code></pre></div>
+<pre><code class=language-js>let str1 = "Mary had a little kitten";
+console.log(/^Mary/.test(str1)); // true</code></pre>
 <p>Шаблон <code>^Mary</code> означає: «початок рядка, потім Mary».</p>
 <p>Аналогічно можна перевірити, чи закінчується рядок словом fluffy:</p>
-<div class="sourceCode" id="cb18"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> str1 <span class="op">=</span> <span class="st">&quot;The kitten was fluffy&quot;</span><span class="op">;</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>( <span class="ss">/fluffy</span><span class="sc">$</span><span class="ss">/</span><span class="op">.</span><span class="fu">test</span>(str1) )<span class="op">;</span> <span class="co">// true</span></span></code></pre></div>
+<pre><code class=language-js>let str1 = "The kitten was fluffy";
+console.log(/fluffy$/.test(str1)); // true
+</code></pre>
 <p>Перевіримо, що рядок є часом у форматі <code>12:34</code>, тобто дві
 цифри, потім двокрапка, потім ще дві цифри.</p>
-<div class="sourceCode" id="cb19"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> goodInput <span class="op">=</span> <span class="st">&quot;12:34&quot;</span><span class="op">;</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> badInput <span class="op">=</span> <span class="st">&quot;12:345&quot;</span><span class="op">;</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regexp <span class="op">=</span> <span class="ss">/</span><span class="sc">^\d\d</span><span class="ss">:</span><span class="sc">\d\d$</span><span class="ss">/</span><span class="op">;</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>( regexp<span class="op">.</span><span class="fu">test</span>(goodInput) )<span class="op">;</span> <span class="co">// true</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>( regexp<span class="op">.</span><span class="fu">test</span>(badInput) )<span class="op">;</span> <span class="co">// false</span></span></code></pre></div>
+<pre><code class=language-js>let goodInput = "12:34";
+let badInput = "12:345";
+
+let regexp = /^\d\d:\d\d$/;
+console.log(regexp.test(goodInput)); // true
+console.log(regexp.test(badInput)); // false
+</code></pre>
 <p>Зверніть увагу: символ <code>^</code> після квадратної дужки має
 інший сенс - це ознака початку негативного набору (negative set).</p>
 <p>Важливо знати:</p>
@@ -1144,8 +1102,8 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb19
 <p>Шаблон <code>\d{5}</code> позначає рівно 5 цифр, він еквівалентний
 <code>\d\d\d\d\d</code>.</p>
 <p>Наступний приклад знаходить п'ятизначне число:</p>
-<div class="sourceCode" id="cb20"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;I&#39;m 12345 years old&quot;</span><span class="op">.</span><span class="fu">match</span>(<span class="ss">/</span><span class="sc">\d{5}</span><span class="ss">/</span>) )<span class="op">;</span> <span class="co">// &quot;12345&quot;</span></span></code></pre></div>
+<pre><code class=language-js>console.log("I'm 12345 years old".match(/\d{5}/)); // "12345"
+</code></pre>
 <p>Ми можемо додати <code>\b</code>, щоб виключити числа довші:
 <code>\b\d{5}\b</code>.</p>
 <p>Для того, щоб знайти числа від 3 до 5 цифр, ми можемо вказати межі у
@@ -1154,8 +1112,8 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb20
 запису:</p>
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col style="width: 9%" />
+<col style="width: 90%" />
 </colgroup>
 <thead>
 <tr>
@@ -1201,20 +1159,21 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb20
 <p>Це важливий аспект. За відсутності збігів повертається не порожній
 масив, а саме <code>null</code>. Якщо про це забути, можна легко
 припуститися помилки, наприклад:</p>
-<div class="sourceCode" id="cb21"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> matches <span class="op">=</span> <span class="st">&quot;JavaScript&quot;</span><span class="op">.</span><span class="fu">match</span>(<span class="ss">/HTML/</span>)<span class="op">;</span> <span class="co">// = null</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="op">!</span>matches<span class="op">.</span><span class="at">length</span>) { <span class="co">// Помилка: у null немає властивості length</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;Помилка у рядку вище&quot;</span>)<span class="op">;</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> matches <span class="op">=</span> <span class="st">&quot;JavaScript&quot;</span><span class="op">.</span><span class="fu">match</span>(<span class="ss">/HTML/</span>)<span class="op">;</span> <span class="co">// = null</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="op">!</span>matches<span class="op">.</span><span class="at">length</span>) {</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Помилка: у null немає властивості length</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;Помилка у рядку вище&quot;</span>)<span class="op">;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>Якщо хочеться, щоб результатом завжди був масив, можна написати
 так:</p>
-<div class="sourceCode" id="cb22"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> matches <span class="op">=</span> <span class="st">&quot;JavaScript&quot;</span><span class="op">.</span><span class="fu">match</span>(<span class="ss">/HTML/</span>) <span class="op">||</span> []<span class="op">;</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="op">!</span>matches<span class="op">.</span><span class="at">length</span>) {</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;Збігів немає&quot;</span>)<span class="op">;</span> <span class="co">// тепер працює</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code class=language-js>let matches = "JavaScript".match(/HTML/) || [];
+
+if (!matches.length) {
+console.log("Збігів немає"); // тепер працює
+}
+</code></pre>
 <h3 id="str.matchall">str.matchAll</h3>
 <p>Метод <code>str.matchAll(regexp)</code> - "новий, покращений" варіант
 методу <code>str.match</code>.</p>
@@ -1233,22 +1192,21 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb22
 об'єкт, що перебирається.</li>
 </ul>
 <p><strong>Приклад</strong></p>
-<div class="sourceCode" id="cb23"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> str <span class="op">=</span> <span class="st">&#39;&lt;h1&gt;Hello, world!&lt;/h1&gt;&#39;</span><span class="op">;</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regexp <span class="op">=</span> <span class="ss">/&lt;</span><span class="sc">(</span><span class="ss">.</span><span class="sc">*?)</span><span class="ss">&gt;/g</span><span class="op">;</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> matchAll <span class="op">=</span> str<span class="op">.</span><span class="fu">matchAll</span>(regexp)<span class="op">;</span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(matchAll)<span class="op">;</span> </span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co">// [object RegExp String Iterator], не масив, а об&#39;єкт, що перебирається</span></span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>matchAll <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(matchAll)<span class="op">;</span> <span class="co">// тепер масив</span></span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> firstMatch <span class="op">=</span> matchAll[<span class="dv">0</span>]<span class="op">;</span></span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>( firstMatch[<span class="dv">0</span>] )<span class="op">;</span>  <span class="co">// &lt;h1&gt;</span></span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>( firstMatch[<span class="dv">1</span>] )<span class="op">;</span>  <span class="co">// h1</span></span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>( firstMatch<span class="op">.</span><span class="at">index</span> )<span class="op">;</span>  <span class="co">// 0</span></span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>( firstMatch<span class="op">.</span><span class="at">input</span> )<span class="op">;</span>  <span class="co">// &lt;h1&gt;Hello, world!&lt;/h1&gt;</span></span></code></pre></div>
+<pre><code class=language-js>let str = "{Hello}, {world}!";
+let regexp = /{(.*?)}/g;
+let matchAll = str.matchAll(regexp);
+
+console.log(matchAll);
+// [object RegExp String Iterator], не масив, а об'єкт, що перебирається
+
+matchAll = Array.from(matchAll); // тепер масив
+
+let firstMatch = matchAll[0];
+console.log(firstMatch[0]); // {Hello}
+console.log(firstMatch[1]); // Hello
+console.log(firstMatch.index); // 0
+console.log(firstMatch.input); // {Hello}, {world}!
+</code></pre>
 <p>При переборі результатів <code>matchAll</code> у циклі
 <code>for..of</code> виклик <code>Array.from</code>, зрозуміло, не
 потрібен.</p>
@@ -1257,11 +1215,11 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb23
 з <code>regexp</code> у рядку <code>str</code> або -1, якщо збігу
 немає.</p>
 <p><strong>Приклад</strong></p>
-<div class="sourceCode" id="cb24"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> str <span class="op">=</span> <span class="st">&quot;I love JavaScript!&quot;</span><span class="op">;</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regexp <span class="op">=</span> <span class="ss">/Java.</span><span class="sc">+</span><span class="ss">/</span><span class="op">;</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(str<span class="op">.</span><span class="fu">search</span>(regexp))<span class="op">;</span> <span class="co">// 7</span></span></code></pre></div>
+<pre><code class=language-js>let str = "I love JavaScript!";
+let regexp = /Java.+/;
+
+console.log(str.search(regexp)); // 7
+</code></pre>
 <p>Важливе обмеження: <code>str.search</code> вміє повертати лише
 позицію першого збігу. Всі входження можна знайти, наприклад, за
 допомогою <code>str.matchAll(regexp)</code>.</p>
@@ -1270,11 +1228,9 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb24
 <code>regexp</code> у рядку <code>str</code> на <code>replacement</code>
 (всі, якщо є модифікатор <code>g</code>, інакше тільки перше).</p>
 <p><strong>Приклад</strong></p>
-<div class="sourceCode" id="cb25"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;We will, we will&quot;</span><span class="op">.</span><span class="fu">replace</span>(<span class="ss">/we/i</span><span class="op">,</span> <span class="st">&quot;I&quot;</span>))<span class="op">;</span> <span class="co">// I will, we will</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;We will, we will&quot;</span><span class="op">.</span><span class="fu">replace</span>(<span class="ss">/we/ig</span><span class="op">,</span> <span class="st">&quot;I&quot;</span>))<span class="op">;</span> <span class="co">// I will, I will</span></span></code></pre></div>
-<iframe src="examples/ex10.html" width="100%" frameborder="0">
-</iframe>
+<pre><code class=language-js>console.log("We will, we will".replace(/we/i, "I")); // I will, we will
+console.log("We will, we will".replace(/we/gi, "I")); // I will, I will
+</code></pre>
 <p>У рядку заміни <code>replacement</code> ми можемо використовувати
 спеціальні комбінації символів для вставки фрагментів збігу:</p>
 <table>
@@ -1312,11 +1268,9 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb25
 </tbody>
 </table>
 <p><strong>Приклад</strong></p>
-<div class="sourceCode" id="cb26"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;I love HTML&quot;</span><span class="op">.</span><span class="fu">replace</span>(<span class="ss">/HTML/</span><span class="op">,</span> <span class="st">&quot;$&amp; и JavaScript&quot;</span>) )<span class="op">;</span> </span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co">// I love HTML и JavaScript</span></span></code></pre></div>
-<iframe src="examples/ex9.html" width="100%" frameborder="0">
-</iframe>
+<pre><code class=language-js>console.log("I love HTML".replace(/HTML/, "$& и JavaScript"));
+// I love HTML и JavaScript
+</code></pre>
 <p>Для ситуацій, які вимагають «розумних» замін, другим аргументом може
 бути функція. Вона буде викликатись для кожного збігу, і її результат
 буде вставлений як заміна.</p>
@@ -1324,14 +1278,14 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb26
 <h3 id="regexp.test">regexp.test</h3>
 <p>Метод <code>regexp.test(str)</code> перевіряє, чи є хоч один збіг,
 якщо так, то повертає <code>true</code>, інакше <code>false</code>.</p>
-<div class="sourceCode" id="cb27"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> str <span class="op">=</span> <span class="st">&quot;I LoVe JavaScript&quot;</span><span class="op">;</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regexp <span class="op">=</span> <span class="ss">/love/i</span><span class="op">;</span></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(regexp<span class="op">.</span><span class="fu">test</span>(str))<span class="op">;</span> <span class="co">// true</span></span></code></pre></div>
+<pre><code class=language-js>let str = "I LoVe JavaScript";
+let regexp = /love/i;
+
+console.log(regexp.test(str)); // true
+</code></pre>
 <p>Вам не обов'язково спочатку поміщати регулярний вираз у змінну:</p>
-<div class="sourceCode" id="cb28"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="ss">/love/i</span><span class="op">.</span><span class="fu">test</span>(<span class="st">&quot;I LoVe JavaScript&quot;</span>))<span class="op">;</span> <span class="co">// true</span></span></code></pre></div>
+<pre><code class=language-js>console.log(/love/i.test("I LoVe JavaScript")); // true
+</code></pre>
 <h3 id="regexp.exec">regexp.exec</h3>
 <p>Метод <code>regexp.exec(str)</code> шукає збіг з <code>regexp</code>
 у рядку <code>str</code>.</p>
@@ -1360,13 +1314,13 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb28
 <p>Ми можемо використовувати <code>regexp.exec</code> для пошуку збігу,
 починаючи з потрібної позиції, якщо вручну поставимо
 <code>lastIndex</code>.</p>
-<div class="sourceCode" id="cb29"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> str <span class="op">=</span> <span class="st">&#39;Hello, world!&#39;</span><span class="op">;</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regexp <span class="op">=</span> <span class="ss">/</span><span class="sc">\w+</span><span class="ss">/g</span><span class="op">;</span> <span class="co">// без g властивість lastIndex ігнорується</span></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>regexp<span class="op">.</span><span class="at">lastIndex</span> <span class="op">=</span> <span class="dv">5</span><span class="op">;</span> <span class="co">// шукаємо з 5-ї позиції (тобто з коми і далі)</span></span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>( regexp<span class="op">.</span><span class="fu">exec</span>(str) )<span class="op">;</span> <span class="co">// world</span></span></code></pre></div>
+<pre><code class=language-js>let str = "Hello, world!";
+
+let regexp = /\w+/g; // без g властивість lastIndex ігнорується
+regexp.lastIndex = 5; // шукаємо з 5-ї позиції (тобто з коми і далі)
+
+console.log(regexp.exec(str)); // world
+</code></pre>
 <h2 id="тестування-регулярних-виразів">Тестування регулярних
 виразів</h2>
 <p>Існує кілька зручних інструментів для тестування та візуалізації
@@ -1379,8 +1333,8 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb29
 <p>У Javascript є два види коментарів: <code>//</code> и
 <code>/*...*/</code>. Регулярний вираз для пошуку коментарів можна
 візуалізувати:</p>
-<div class="sourceCode" id="cb30"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ss">/</span><span class="sc">\/\*[\s\S]*?\*\/|\/\/</span><span class="ss">.</span><span class="sc">*</span><span class="ss">/</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ss">/</span><span class="sc">\/\*[\s\S]*?\*\/|\/\/</span><span class="ss">.</span><span class="sc">*</span><span class="ss">/</span><span class="op">;</span></span></code></pre></div>
 <p><img src="regexp-comments.png" width="400" /></p>
 <p>Діаграми корисні для пошуку помилок у своїх регулярних виразах та
 полегшують модифікацію складних виразів, написаних іншими авторами.</p>
@@ -1400,30 +1354,32 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb30
 <h2 id="корисні-практичні-приклади">Корисні практичні приклади</h2>
 <h3 id="замінити-множинні-пробіли-на-один">Замінити множинні пробіли на
 один</h3>
-<div class="sourceCode" id="cb31"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> text <span class="op">=</span> <span class="st">&quot;many    spaces    here&quot;</span><span class="op">;</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(text<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/</span><span class="sc">\s+</span><span class="ss">/g</span><span class="op">,</span> <span class="st">&#39; &#39;</span>))<span class="op">;</span> </span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="co">// результат: &quot;many spaces here&quot;</span></span></code></pre></div>
+<pre><code class=language-js>
+const text = "many    spaces    here";
+console.log(text.replace(/\s+/g, " "));
+// результат: "many spaces here"
+</code></pre>
 <h3 id="витяг-певних-даних-із-рядка">Витяг певних даних із рядка</h3>
 <p>Давайте витягнемо всі числа з тексту.</p>
-<div class="sourceCode" id="cb32"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> regex <span class="op">=</span> <span class="ss">/</span><span class="sc">\d+</span><span class="ss">/g</span><span class="op">;</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> res <span class="op">=</span> <span class="st">&quot;Pinocchio had 1 alphabet and 30 soldi&quot;</span><span class="op">.</span><span class="fu">match</span>(regex)<span class="op">;</span></span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(res)<span class="op">;</span></span></code></pre></div>
+<pre><code class=language-js>let regex = /\d+/g;
+let res = "Pinocchio had 1 alphabet and 30 soldi".match(regex);
+console.log(res);
+</code></pre>
 <h2 id="faq-за-регулярними-виразами">FAQ за регулярними виразами</h2>
 <h3 id="у-чому-різниця-між-match-та-exec">У чому різниця між match() та
 exec()?</h3>
 <p><code>match()</code> - це метод рядка, <code>exec()</code> - це метод
 регулярного виразу.</p>
-<div class="sourceCode" id="cb33"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> text <span class="op">=</span> <span class="st">&quot;test1 test2&quot;</span><span class="op">;</span></span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="co">// match() повертає всі збіги відразу</span></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(text<span class="op">.</span><span class="fu">match</span>(<span class="ss">/test</span><span class="sc">\d</span><span class="ss">/g</span>))<span class="op">;</span> <span class="co">// [&#39;test1&#39;, &#39;test2&#39;]</span></span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="co">// exec() повертає по одному збігу за виклик</span></span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> regex <span class="op">=</span> <span class="ss">/test</span><span class="sc">\d</span><span class="ss">/g</span><span class="op">;</span></span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(regex<span class="op">.</span><span class="fu">exec</span>(text))<span class="op">;</span> <span class="co">// [&#39;test1&#39;]</span></span>
-<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(regex<span class="op">.</span><span class="fu">exec</span>(text))<span class="op">;</span> <span class="co">// [&#39;test2&#39;]</span></span></code></pre></div>
+<pre><code class=language-js>
+const text = "test1 test2";
+// match() повертає всі збіги відразу
+console.log(text.match(/test\d/g)); // ['test1', 'test2']
+
+// exec() повертає по одному збігу за виклик
+const regex = /test\d/g;
+console.log(regex.exec(text)); // ['test1']
+console.log(regex.exec(text)); // ['test2']
+</code></pre>
 <p>Який метод обрати?</p>
 <ul>
 <li>Використовуйте <code>match()</code> коли потрібно знайти всі збіги
@@ -1434,20 +1390,21 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb33
 <h3 id="як-зробити-групу-незахоплюючою">Як зробити групу
 незахоплюючою?</h3>
 <p>Використовуйте <code>(?:...)</code></p>
-<div class="sourceCode" id="cb34"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> text <span class="op">=</span> <span class="st">&quot;I love Javascript&quot;</span><span class="op">;</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(text<span class="op">.</span><span class="fu">match</span>(<span class="ss">/</span><span class="sc">(?</span><span class="ss">:I</span><span class="sc">)</span><span class="ss"> </span><span class="sc">(</span><span class="ss">love</span><span class="sc">)</span><span class="ss">/</span>))<span class="op">;</span> </span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="co">// [&#39;I love&#39;, &#39;love&#39;]</span></span></code></pre></div>
+<pre><code class=language-js>
+const text = "I love Javascript";
+console.log(text.match(/(?:I) (love)/));
+// ['I love', 'love']
+</code></pre>
 <h3 id="як-обробляти-помилки-під-час-роботи-з-регулярними-виразами">Як
 обробляти помилки під час роботи з регулярними виразами?</h3>
 <p>Використовуйте конструкцію <code>try/catch</code></p>
-<div class="sourceCode" id="cb35"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span> {</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> userInput <span class="op">=</span> <span class="st">&quot;* (&quot;</span><span class="op">;</span> </span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">new</span> <span class="bu">RegExp</span>(userInput)<span class="op">;</span></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>} <span class="cf">catch</span> (e) {</span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;Некоректний регулярний вираз&quot;</span>)<span class="op">;</span></span>
-<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span> {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> userInput <span class="op">=</span> <span class="st">&quot;* (&quot;</span><span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="bu">RegExp</span>(userInput)<span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>} <span class="cf">catch</span> (e) {</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;Некоректний регулярний вираз&quot;</span>)<span class="op">;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>Щоб уникнути синтаксичних помилок, перевіряйте регулярні вирази в
 спеціальних інструментах (онлайнових тестерах, IDE з підсвічуванням
 тощо).</p>
@@ -1465,11 +1422,11 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb35
 <p>Щоб використовувати спеціальний символ як звичайний, додайте до нього
 зворотну косу рису: <code>\.</code>.</p>
 <p>Це називається "екранування символу".</p>
-<div class="sourceCode" id="cb36"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> price <span class="op">=</span> <span class="st">&quot;$100.50&quot;</span><span class="op">;</span></span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="co">// Неправильно: const regex = /$/;</span></span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="co">// Правильно:</span></span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> regex <span class="op">=</span> <span class="ss">/</span><span class="sc">\$</span><span class="ss">/</span><span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> price <span class="op">=</span> <span class="st">&quot;$100.50&quot;</span><span class="op">;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">// Неправильно: const regex = /$/;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">// Правильно:</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> regex <span class="op">=</span> <span class="ss">/</span><span class="sc">\$</span><span class="ss">/</span><span class="op">;</span></span></code></pre></div>
 <p>Круглі дужки також є спеціальними символами, тому якщо нам потрібно
 використовувати саме їх, потрібно вказати <code>\(</code>.</p>
 <p>Символ косої риси <code>/</code>, так званий "слеш", не є спеціальним
@@ -1477,38 +1434,39 @@ class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb36
 регулярного виразу: <code>/...шаблон.../</code>, тому ми повинні
 екранувати його.</p>
 <p>Ось як виглядає пошук косої риси:</p>
-<div class="sourceCode" id="cb37"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;/&quot;</span><span class="op">.</span><span class="fu">match</span>(<span class="ss">/</span><span class="sc">\/</span><span class="ss">/</span>))<span class="op">;</span> <span class="co">// &#39;/&#39;</span></span></code></pre></div>
+<pre><code class=language-js>
+console.log("/".match(/\//)); // '/'
+</code></pre>
 <p>З іншого боку, якщо ми не використовуємо запис <code>/.../</code>, а
 створюємо регулярний вираз, використовуючи <code>new RegExp</code>, тоді
 нам не потрібно екранувати косу рису:</p>
-<div class="sourceCode" id="cb38"><pre
-class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>( <span class="st">&quot;/&quot;</span><span class="op">.</span><span class="fu">match</span>(<span class="kw">new</span> <span class="bu">RegExp</span>(<span class="st">&quot;/&quot;</span>)) )<span class="op">;</span> <span class="co">// знаходить /</span></span></code></pre></div>
+<pre><code class=language-js>
+console.log("/".match(new RegExp("/"))); // знаходить /
+</code></pre>
 <h3 id="у-чому-відмінність-крапки-від-ss">У чому відмінність крапки від
 \s\S</h3>
 <p>Вираз <code>.*</code> не захоплює перехід на новий рядок, на відміну
 від <code>\s\S</code>.</p>
-</body>
 <script src=https://flems.io/flems.html id=flems defer></script>
 <script>
-		document.getElementById("flems").onload = function() {
-			;[].forEach.call(document.querySelectorAll("pre code.language-js"), function(el) {
-				el = el.parentNode
+        document.getElementById("flems").onload = function() {
+            ;[].forEach.call(document.querySelectorAll("pre code.language-js"), function(el) {
+                el = el.parentNode
 
-				var div = document.createElement("div")
-				window.Flems(div, {
-					middle        : 60,
-					selected: 'b.js',
-					editable      : true,
-					toolbar       : false,
-					shareButton   : true,
-					console       : false,
-					autoHeight    : true,
-					fileTabs      : false,
-					files: [{
-						name: "a.js",
-						content: `
-						const output = document.createElement('div');
+                var div = document.createElement("div")
+                window.Flems(div, {
+                    middle        : 73,
+                    selected      : 'b.js',
+                    editable      : true,
+                    toolbar       : false,
+                    shareButton   : true,
+                    console       : false,
+                    autoHeight    : true,
+                    fileTabs      : false,
+                    files: [{
+                        name: "a.js",
+                        content: `
+                        const output = document.createElement('div');
 document.body.appendChild(output);
 const originalConsoleLog = console.log;
 console.log = function(message) {
@@ -1516,14 +1474,14 @@ console.log = function(message) {
     originalConsoleLog.apply(console, arguments);
 };`},
                                         {       name: "b.js",
-						content: el.textContent
-					}]
-				}, "https://flems.io/flems.html")
+                        content: el.textContent
+                    }]
+                }, "https://flems.io/flems.html")
 
-				el.parentNode.insertBefore(div, el)
-				el.parentNode.removeChild(el)
-			})
-		}
+                el.parentNode.insertBefore(div, el)
+                el.parentNode.removeChild(el)
+            })
+        }
 </script>
-
+</body>
 </html>
