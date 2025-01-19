@@ -3,6 +3,4 @@
 
 [Regular Expressions](./regular-expressions-js.md)
 
-[Regular Expressions (with interactive code snippets)](./regular-expressions-js-flems.md)
-
-[Regular Expressions (with flems)](./regexpr-with-flems.html)
+[Regular Expressions (with flems - interactive code snippets)](./regexpr-with-flems.html)
