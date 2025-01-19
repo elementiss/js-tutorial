@@ -1298,12 +1298,12 @@ exec()?</h3>
 <pre><code class=language-js>
 const text = "test1 test2";
 // match() повертає всі збіги відразу
-console.log(text.match(/test\d/g)); // ['test1', 'test2']
+document.write(text.match(/test\d/g)); // ['test1', 'test2']
 
 // exec() повертає по одному збігу за виклик
 const regex = /test\d/g;
-console.log(regex.exec(text)); // ['test1']
-console.log(regex.exec(text)); // ['test2']
+document.write(regex.exec(text)); // ['test1']
+document.write(regex.exec(text)); // ['test2']
 </code></pre>
 <p>Який метод обрати?</p>
 <ul>
